@@ -21,17 +21,52 @@
 # print(sum(range(8, 81)))
 #
 # print(range(80, 8, -2))
+#
+# import datetime
+#
+# date = datetime.datetime.now()
+# print(date)
+# x = int(input("ROK"))
+# y = int(input("miesiac"))
+# z = int(input("dzień"))
+#
+# date1 = datetime.date(2024, 2, 28)
+# date2 = datetime.date(x, y, z)
+#
+# a = date1 - date2
+# print(a)
+#
+def add(arg1, arg2):
+    print(arg1 + arg2)
 
-import datetime
+def div(arg1, arg2):
+    if arg2 == 0:
+        print("Blad")
+    else:
+        print(arg1 / arg2)
 
-date = datetime.datetime.now()
-print(date)
-x = int(input("ROK"))
-y = int(input("miesiac"))
-z = int(input("dzień"))
+def mul(arg1, arg2):
+    print(arg1 * arg2)
 
-date1 = datetime.date(2024, 2, 28)
-date2 = datetime.date(x, y, z)
+def min(arg1, arg2):
+    print(arg1 - arg2)
 
-a = date1 - date2
-print(a)
+def start():
+    x = int(input("podaj liczbe a: "))
+    y = int(input("podaj liczbe b: "))
+
+    while True:
+        choice = int(input("podaj dzialanie: 1-dodawanie, 2-dzielenie, 3-mnozenie, 4-odejmowanie 5-wyjscie "))
+        if choice == 1:
+            add(x, y)
+        elif choice == 2:
+            div(x, y)
+        elif choice == 3:
+            mul(x, y)
+        elif choice == 4:
+            min(x, y)
+        else:
+            print("koniec")
+            break
+
+start()
