@@ -19,5 +19,19 @@
 # print(sum([int(x) for x in (input("podaj liczby oddzielnie:").split())]))
 #
 # print(sum(range(8, 81)))
+#
+# print(range(80, 8, -2))
 
-print(range(80, 8, -2))
+import datetime
+
+date = datetime.datetime.now()
+print(date)
+x = int(input("ROK"))
+y = int(input("miesiac"))
+z = int(input("dzień"))
+
+date1 = datetime.date(2024, 2, 28)
+date2 = datetime.date(x, y, z)
+
+a = date1 - date2
+print(a)
